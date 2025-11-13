@@ -24,7 +24,7 @@ const analytics = new DiscordAnalytics(bot, logger);
 bot.once(Events.ClientReady, () => {
   void logger.log("debug", "Client is ready!");
   analytics.startCron();
-  const hourly = "32 * * * *";
+  const hourly = "0 * * * *";
   scheduleJob("reminders", hourly, () => {
     void sendReminders(bot, database);
   });
