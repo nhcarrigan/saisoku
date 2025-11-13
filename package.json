@@ -1,0 +1,33 @@
+{
+  "name": "saisoku",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src --max-warnings 0",
+    "start": "op run --env-file=prod.env -- node prod/index.js",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.20.0",
+  "devDependencies": {
+    "@nhcarrigan/eslint-config": "5.2.0",
+    "@nhcarrigan/typescript-config": "4.0.0",
+    "@types/node": "24.10.1",
+    "@types/node-schedule": "2.1.8",
+    "eslint": "9.39.1",
+    "prisma": "6.19.0",
+    "typescript": "5.9.3"
+  },
+  "dependencies": {
+    "@nhcarrigan/discord-analytics": "0.0.6",
+    "@nhcarrigan/logger": "1.1.1",
+    "@prisma/client": "6.19.0",
+    "discord.js": "14.24.2",
+    "fastify": "5.6.2",
+    "node-schedule": "2.1.1"
+  }
+}
