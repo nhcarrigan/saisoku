@@ -11,6 +11,7 @@ import { scheduleJob } from "node-schedule";
 import { completeTask } from "./modules/completeTask.js";
 import { createReminder } from "./modules/createReminder.js";
 import { sendReminders } from "./modules/sendReminders.js";
+import { instantiateServer } from "./server/serve.js";
 import { logger } from "./utils/logger.js";
 
 const bot = new Client({
@@ -39,3 +40,4 @@ bot.on(Events.InteractionCreate, (interaction) => {
 });
 
 await bot.login(process.env.BOT_TOKEN ?? "");
+instantiateServer();
